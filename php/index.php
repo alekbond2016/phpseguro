@@ -7,7 +7,7 @@
       <?php include "linkscss.php"; 
       ?>
    </head>
-   <body>
+   <body id="modoOscuro">
 <nav class=" navbar navbar-expand-lg  navbar-dark colorblue" >
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -28,7 +28,9 @@
       </form>
 
       
-      <button class="btn btn-primary btn-lg my-2 my-sm-0 sinradio colorblue float-right" type="submit" onclick="toggleFullScreen()"><i class="fa fa-arrows-alt "></i>&nbsp;</button> 
+      <button class="btn btn-primary  my-2 my-sm-0 sinradio colorblue float-right" type="submit" onclick="toggleFullScreen()"><i class="fa fa-arrows-alt "></i>&nbsp;Full Screen</button>  
+
+  
 
 
   </div>
@@ -175,7 +177,7 @@
                         <form id="frmAgregarDatosU"   enctype= "multipart/form-data" >
                            <div class="form-group row ">
                               <div class="col-sm-12">
-                                 <input type="text" class="form-control text-uppercase" id="idu"  placeholder="Nombre" name="idu"  value=""  hidden="" required />
+                                 <input type="text" class="form-control text-uppercase" id="idu"  placeholder="Nombre" name="idu"    required />
                               </div>
                               
                            </div>
@@ -225,10 +227,13 @@
                      </div>
                   </div>
                </div>
+                          <span class="btn btn-outline-primary btn-sm fa fa-thumbs-o-down float-left"  onclick="eliminarMio()"></span>
                <br>
                <div class="modal-footer">
                   <button type="button" class="btn btn-primary"    id="btnActualizarDatos" data-dismiss="modal" onclick="actualizaDatos()">Guardar Cambios</button>
                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+
+
 
                </div>
             </div>
@@ -305,13 +310,13 @@ function toggleFullScreen() {
 <!--  -->
 <!-- DESHABILITAR CLICK DERECHO -->
 
-<script type='text/javascript'>
+<!-- <script type='text/javascript'>
 $(function(){
     $(document).bind("contextmenu",function(e){
         return false;
     });
 });
-</script>
+</script> -->
 <!--  -->
 
 
@@ -325,7 +330,24 @@ $(function(){
       </script> -->
 
       
+         
+
+     
+
+      <script type="text/javascript">
+         function eliminarMio(argument) {
+            a=document.getElementById("idu").value;
+            eliminarDatos(a);
+         }
+      </script>
+        
+
         
       
    </body>
 </html>
+
+
+<!-- MATRIX -->
+<!-- https://mega.nz/#!pMgnRBLA!uk0pxW5tY4N7WRdzHwvOI64e5GSDyuZuGvC3lXMQLa8 -->
+

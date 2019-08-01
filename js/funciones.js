@@ -106,6 +106,11 @@ function eliminarDatos(idNombre){
 					});
 				 $(".swal-container.in").css('background-color', 'rgb(43, 165, 137)');
 
+				 $(document).ready(iniciar);
+				 function iniciar() {
+					     $('#modalActualizar').modal('hide');
+					}
+
 				}else{
 					swal("Poof! No se pudo eliminar el registro", {
 				      icon: "warning",
@@ -132,6 +137,7 @@ function eliminarDatos(idNombre){
 // ****************************************
 
 function editaDatos(id){
+
 	$.ajax({
 		type: "POST",
 		data: "id="+ id,
@@ -148,6 +154,8 @@ function editaDatos(id){
 			$('#edadu').val(datos['edad']);
 			$('#estadou').val(datos['estado']);
 
+
+
 		}
 	});
 	
@@ -155,6 +163,7 @@ function editaDatos(id){
 }
 
 function actualizaDatos(){
+ 
 		$.ajax({
 	type:"POST",
 	data:$('#frmAgregarDatosU').serialize(),

@@ -109,6 +109,18 @@ echo '<table id="myTable" class="table  table-bordered table-hover table-sm tabl
 </script>
 
 
+<script type="text/javascript">
+ 
+
+
+                        $(document).ready(function() {
+  $('#modalActualizar').on('shown.bs.modal', function() {
+    $('#nombreu').trigger('focus');
+  });
+});
+</script>
+
+
 
 
 <!--  -->

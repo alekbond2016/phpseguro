@@ -224,3 +224,10 @@
   padding: 16px 32px;
 }
 /*
+
+
+/*modo oscuro*/
+
+.darkmode{
+  filter: invert(100%);
+}
